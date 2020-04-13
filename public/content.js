@@ -4,7 +4,10 @@ function billify() {
   images.forEach((image) => {
     const width = image.naturalWidth;
     const height = image.naturalHeight;
-    image.setAttribute("src", `https://www.fillmurray.com/${width}/${height}`);
+    image.setAttribute(
+      "src",
+      `https://www.fillmurray.com/${width || 500}/${height || 500}`
+    );
   });
 }
 
